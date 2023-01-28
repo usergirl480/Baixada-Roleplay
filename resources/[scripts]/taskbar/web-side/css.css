@@ -1,0 +1,63 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: transparent;
+}
+
+* {
+	user-select: none;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.circlewrap {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.circlewrap .letters {
+	width: 70px;
+	z-index: 9;
+	height: 70px;
+	margin-top: 30%;
+	font-size: 20px;
+	font-weight: 500;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	border-radius: 100%;
+	justify-content: center;
+	color: rgba(255,255,255,0.75);
+	background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.circlewrap > svg {
+	margin-top: 30%;
+	transform: rotate(-90deg);
+}
+
+#backline {
+	stroke: rgba(15,15,15,0.75);
+}
+
+#skillprogress {
+	stroke: rgba(204, 204, 204, 0.534);
+	stroke-dasharray: 100;
+	stroke-dashoffset: calc(100 - var(--val));
+}
+
+#skillgap {
+	z-index: 101;
+	stroke: #848deb71;
+	stroke-dasharray: 100;
+	stroke-dashoffset: calc(100 - var(--val));
+	transform-box: fill-box;
+	transform-origin: center;
+}

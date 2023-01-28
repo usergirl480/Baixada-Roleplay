@@ -1,0 +1,142 @@
+* {
+	user-select: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	background-color: transparent;
+}
+
+.body {
+	right: 0;
+	top: 60px;
+	right: 20px;
+	height: 290px;
+	zoom: 1.0;
+	display: flex;
+	color: #fff;
+	padding: 15px 0;
+	overflow: hidden;
+	position: absolute;
+	align-items: flex-end;
+	flex-direction: column;
+}
+
+.container {
+	margin-right: 30px;
+}
+
+.notification {
+	position: relative;
+	padding: 10px;
+	display: flex;
+	width: 250px;
+	font-size: 10px;
+	border-radius: 5px;
+	align-items: center;
+	margin-bottom: 10px;
+	background: rgba(17, 17, 17, 0.7);
+  	border: 2px solid rgba(255, 255, 255, 0.11);
+}
+
+.notification::before {
+	content: '';
+	position: absolute;
+	left: -1px;
+	width: 2px;
+	height: 80%;
+	background-color: #848CEB;
+}
+
+.content {
+	font-size: 12px;
+}
+
+.buttons {
+	display: flex;
+}
+
+.content-line {
+	color: rgba(255, 255, 255, 0.514);
+	margin: 7px 0;
+	margin-left: 10px;
+}
+
+.content-line:last-child {
+	margin-bottom: 0;
+}
+
+.content-line .icon {
+	color: #fff;
+}
+
+.actions {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translate(0,-50%);
+}
+
+.chamados {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	margin-top: 5px;
+	align-items: center;
+	transition: all .2s;
+	border-radius: 100%;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, .4);
+}
+
+.chamados:first-child {
+	margin-top: 0;
+}
+
+.chamados:hover {
+	background-color: #848CEB;
+}
+
+.chamados svg {
+	z-index: 99999999;
+	font-size: 13px;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+}
+
+.titulo {
+	position: relative;
+	font-weight: bold;
+	overflow: hidden;
+	margin: 0 10px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+}
+
+.texto {
+	color: #ebebeb52;
+	line-height: 16px;
+	padding: 8px 10px;
+	font-size: 11px;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	background: rgba(0, 0, 0, .4);
+}
+
+::-webkit-scrollbar {
+	background: transparent;
+	width: 0;
+}
+
+::selection {
+	background: transparent;
+}
+
+::-moz-selection {
+	background: transparent;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body style="display:none">
+		<main>
+			<div class="box">
+				<div class="box-header">
+				  <div class="title">LOJA</div>
+				  <div class="subtitle">TATUAGEM</div>
+				</div>
+				<div class="categorys-head">CATEGORIAS<hr></div>
+				<div class="categorys">
+					<div class="option" category-name="head"><img src="images/head.png"></div>
+					<div class="option" category-name="leftarm"><img src="images/arm-left.png"></div>
+					<div class="option" category-name="rightarm"><img src="images/arm-right.png"></div>
+					<div class="option" category-name="torso"><img src="images/chest.png"></div>
+					<div class="option" category-name="rightleg"><img src="images/leg-right.png"></div>
+					<div class="option" category-name="leftleg"><img src="images/leg-left.png"></div>
+					<!-- <div id="reset"><i class="fa-solid fa-arrow-rotate-right"></i> Resetar</div> -->
+				</div>
+				<section>
+					<div class="items-head">CABEÇA</div>
+					<div class="allcontent">
+						<div class="revert" id="items"></div>
+					</div>
+					<footer>
+						<button id="reset" class="inactive"><i class="fa-solid fa-rotate-right"></i> LIMPAR</button>
+						<button id="save"><i class="fa-solid fa-check"></i> SALVAR</button>
+					</footer>
+				</section>
+			</div>
+            <div class="rotate">
+				<div>
+					<span>ESC</span>
+					FECHAR
+				</div>
+                <div>
+                    <span>A</span>
+                    ESQUERDA
+                </div>
+                <div>
+                    <span>D</span>
+                    DIREITA
+                </div>
+            </div>
+			<div class="cams">
+				<div class="title">CÂMERA</div>
+				<div class="set-camera" data-value="1"><img src="images/head.png"></div>
+				<div class="set-camera" data-value="2"><img src="images/chest.png"></div>
+				<div class="set-camera" data-value="3"><img src="images/leg-right.png"></div>
+			</div>
+		</main>
+		<script src="nui://game/ui/jquery.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
+

@@ -1,0 +1,854 @@
+@font-face {
+  font-family: 'Akrobat Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Akrobat Regular'), url('../fonts/Akrobat-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Akrobat Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Akrobat Light'), url('../fonts/Akrobat-Light.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Akrobat ExtraLight';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Akrobat ExtraLight'), url('../fonts/Akrobat-ExtraLight.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Akrobat SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Akrobat SemiBold'), url('../fonts/Akrobat-SemiBold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Akrobat Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Akrobat Bold'), url('../fonts/Akrobat-Bold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Akrobat ExtraBold Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Akrobat ExtraBold Regular'), url('../fonts/akrobat-extrabold-webfont.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Akrobat Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Akrobat Black'), url('../fonts/Akrobat-Black.woff') format('woff');
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: none;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*
+=========================================
+  Logo
+=========================================
+*/
+
+#logo {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  opacity: .7;
+  max-width: 160px;
+  transform: translate(-50%,0);
+}
+
+/* #logo {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: .6;
+  max-width: 80px;
+} */
+
+/*
+=========================================
+  Player Hud
+=========================================
+*/
+
+.playerHud {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(0,-50%);
+}
+
+.playerHud .circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 100%;
+  margin-bottom: 5px;
+  background-color: rgba(17, 17, 17, 0.7);
+  align-items: center;justify-content: center;
+}
+
+.playerHud .circle i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.playerHud .circle:last-child {
+  margin-bottom: 0;
+}
+
+.playerHud .microphone {
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  border-radius: 15px;
+  padding-bottom: 7px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(17, 17, 17, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.playerHud .microphone i {
+  margin-bottom: 3px;
+  font-size: 22px;
+}
+
+.playerHud .microphone .micStatus {
+  width: 12px;
+  height: 12px;
+  margin-bottom: 5px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.playerHud .microphone .active {background-color: #fff;}
+
+/*
+=========================================
+  Velocimeter
+=========================================
+*/
+
+.velocimeterHud {
+  position: absolute;
+  right: 70px;
+  bottom: 30px;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  flex-direction: column;
+}
+
+.velocimeterHud .carMarch {
+  position: relative;
+  top: -10px;
+  left: -8px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.velocimeterHud .carMarch small {
+  font-size: 10px;
+  font-weight: 500;
+  color: #ffffff63;
+  font-family: 'Akrobat SemiBold';
+}
+
+.velocimeterHud .carMarch div {
+  display: flex;
+  margin: 0 8px;
+  font-size: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Akrobat Bold';
+}
+
+.velocimeterHud h1 {
+  width: 80px;
+  font-size: 40px;
+  margin-top: -4px;
+  margin-bottom: -6px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: 'Akrobat ExtraBold Regular';
+}
+
+.velocimeterHud h1 b {
+  color: #fff;
+  font-family: 'Akrobat ExtraBold Regular';
+}
+
+.velocimeterHud span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Akrobat Bold';
+}
+
+.velocimeterHud .carInfo {
+  position: relative;
+  left: -6px;top: -7px;
+  font-size: 10px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.velocimeterHud .seatbelt {
+  position: absolute;
+  max-width: 17px;
+  top: 13px;
+  left: -24px;
+}
+
+.velocimeterHud .carInfo img {
+  opacity: .5;
+  margin: 0 5px;
+  max-width: 12px;
+  transition: all .2s;
+}
+
+.velocimeterHud .activeBelt {animation: lightBlink infinite 1s ease-in;}
+.velocimeterHud .carInfo .activeLight {animation: lightBlink infinite .5s ease-in;}
+
+@keyframes lightBlink {
+  0% {
+    opacity: .5;
+  }
+  80%  {
+    opacity: 1;
+  }
+  100% {
+    opacity: .5;
+  }
+}
+
+.velocimeterHud .circle {
+  position: absolute;
+  top: 49%;
+  right: 38px;
+  transform: translate(0,-50%) rotate(-30deg) scale(4.5) scaleX(-1);
+}
+
+.velocimeterHud .carFuel {
+  position: absolute;
+  right: -10px;
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.velocimeterHud .text {
+  position: relative;
+  top: -10px;
+  left: -5px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.velocimeterHud .carFuel i {
+  position: absolute;
+  left: 9px;
+  bottom: -13px;
+  font-size: 11px;
+  transform: rotate(18deg);
+}
+
+.velocimeterHud .carFuel .fuelCircle {
+  left: -100px;
+  top: -38px;
+  position: absolute;
+  transform: rotate(-47deg) scale(5.5) scaleX(-1);
+}
+
+.velocimeterHud .carFuel span b {
+  opacity: .5;
+}
+
+.velocimeterHud .engineCircle {
+  position: absolute;
+  bottom: 115px;
+  right: 113px;
+  zoom: .7;
+}
+
+.velocimeterHud .engineCircle i {
+  position: absolute;
+  left: 51%;
+  top: 45%;
+  font-size: 12px;
+  transform: translate(-50%,-50%);
+}
+
+.outer {
+  -webkit-transform: rotate(130deg);
+  -ms-transform: rotate(130deg);
+  transform: rotate(130deg) scale(.9);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; 
+}
+
+.progress {
+  -webkit-transition: 0.35s stroke-dashoffset;
+  -o-transition: 0.35s stroke-dashoffset;
+  transition: 0.35s stroke-dashoffset;
+  -webkit-transform: rotate(130deg);
+  -ms-transform: rotate(130deg);
+  transform: rotate(130deg) scale(.9);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; 
+}
+
+/*
+=========================================
+  Server Info
+=========================================
+*/
+
+.serverInfos {
+  position: absolute;
+  top: 25px; /* SUBIR AS INFOS */
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.serverInfos .progressBar {
+  width: 120px;
+  height: 15px;
+  border-radius: 30px;
+  background-color: rgba(17, 17, 17, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.serverInfos .progressBar .fill {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 30px;
+  transition: width 100ms;
+  background-color: #848ceb;
+}
+
+.serverInfos .progressBar .fill small {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  color: #fff;
+  font-size: 8px;
+  text-transform: uppercase;
+  transform: translate(0,-50%);
+}
+
+.serverInfos .item {
+  position: relative;
+  color: #fff;
+  font-size: 9px;
+  display: flex;
+  padding: 10px;
+  font-weight: 600;
+  margin-left: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: rgba(17, 17, 17, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hourItem {
+  width: 80px;
+}
+
+.serverInfos .item::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  height: 70%;
+  width: 2px;
+  border-radius: 30px;
+  background-color: #848ceb;
+}
+
+.serverInfos .item .icon {
+  position: relative;
+  display: flex;
+  font-size: 12px;
+  margin-right: 7px;
+  align-items: center;
+  border-radius: 100%;
+  justify-content: center;
+}
+
+.location b {
+  color: #848ceb;
+  font-weight: 600;
+}
+
+/*
+=========================================
+  SVG CIRCLE
+=========================================
+*/
+
+.svgCircle {
+  height: 50px;
+  width: 50px;
+}
+
+.svgCircle circle {
+  fill: none;
+  stroke-width: 2px;
+  stroke-dasharray: 113;
+  transition: all .5s;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.circleFill {
+  stroke: #848ceb;
+  stroke-dashoffset: 100;
+}
+
+.circleBack {
+  stroke: #ffffff32;
+  stroke-width: 3.2px;
+}
+
+
+#movieTop {
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 12%;
+	display: none;
+	background: #000;
+	position: absolute !important;
+}
+
+#movieBottom {
+	left: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 12vw;
+	display: none;
+	background: #000;
+	position: absolute !important;
+}
+
+#hoodDisplay {
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	background: #000;
+	position: absolute !important;
+}
+
+/*
+=========================================
+  TERMS OF SERVICE
+=========================================
+*/
+
+terms {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px;
+  padding: 30px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: #fff;
+  transform: translate(-50%,-50%);
+}
+
+terms #bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  max-width: 1000px;
+  opacity: .1;
+  transform: translate(-50%,-50%);
+}
+
+terms img {
+  margin: 0 auto;
+  max-width: 280px;
+}
+
+terms h1 {
+  font-size: 20px;
+  margin: 20px auto;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+terms h2 {
+  text-align: center;
+  font-size: 10px;
+}
+
+terms .terms-content {
+  width: 350px;
+  display: flex;
+  margin: 20px auto;
+  margin-top: 30px;
+  flex-direction: column;
+}
+
+terms .term-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+terms .number {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-align: center;
+  margin-right: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: #606ef1;
+}
+
+terms .term-item p {
+  max-width: 250px;
+  font-size: 9px;
+  margin-left: 5px;
+  font-weight: 600;
+  color: rgb(122, 122, 122);
+}
+
+terms button {
+  color: #fff;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: background .2s;
+  background-color: #606ef1;
+  text-transform: uppercase;
+}
+
+terms small {
+  opacity: .5;
+  font-weight: 600;
+  margin: 0 auto;
+  font-size: 9px;
+  margin-top: 10px;
+  max-width: 250px;
+  text-align: center;
+}
+
+terms button:hover {
+  background-color: #5360db
+}
+
+terms .terms-form {
+  display: flex;
+  margin: 15px auto;
+  flex-direction: column;
+}
+
+terms .terms-form .input-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+terms .terms-form .input-content:last-child {
+  margin: 0;
+}
+
+terms .terms-form .input-content .icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  color: #86868632;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #848deb5c;
+  background-color: rgba(243, 243, 243, 0.5);
+}
+
+terms .terms-form .input-content input {
+  height: 50px;
+  width: 260px;
+  padding: 0 15px;
+  margin-left: 5px;
+  border-radius: 5px;
+  border: 2px solid #848deb5c;
+  background-color: rgba(243, 243, 243, 0.5);
+}
+
+terms .terms-form .input-content input::placeholder {
+  opacity: .3;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: initial;
+}
+
+terms .terms-form .input-sex {
+  display: flex;
+  align-items: center;
+}
+
+terms .terms-form .input-sex .sex-type {
+  width: 50%;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 5px;
+  transition: all .2s;
+  color: rgb(185, 184, 184);
+  border: 2px solid #848deb5c;
+  background-color: rgba(243, 243, 243, 0.7);
+}
+
+terms .terms-form .input-sex .sex-type:last-child {
+  margin-left: 10px;
+}
+
+terms .terms-form .input-sex .active,
+terms .terms-form .input-sex .sex-type:hover {
+  opacity: 1;
+  color: #fff;
+  font-weight: bold;
+  background-color: #606ef1;
+}
+
+/*
+==============================================
+------------  CUPOM DE DESCONTO --------------
+==============================================
+*/
+
+cupom {
+  position: absolute;
+  top: 20px;
+  right: 300px;
+  padding: 8px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 5px;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.11);
+}
+
+cupom .text {
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  font-size: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+cupom img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 100%;
+  z-index: -1;
+}
+
+cupom .text p {
+  max-width: 180px;
+  margin-top: 5px;
+  word-wrap: break-word;
+  letter-spacing: .5px;
+}
+
+cupom .text .code {
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 5px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+cupom b {
+  font-weight: bold;
+  color: #606ef1;
+}
+
+/*
+==============================================
+------------  CUPOM DE DESCONTO --------------
+==============================================
+*/
+
+.driftPoints {
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  display: flex;
+  color: #fff;
+
+  text-align: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  transform: translate(-50%,0);
+}
+
+.driftPoints small {
+  font-family: 'Akrobat Bold';
+  letter-spacing: 5px;
+  font-size: 7px;
+}
+
+.driftPoints span {
+  font-size: 60px;
+  letter-spacing: 1px;
+  font-family: 'Akrobat ExtraBold Regular';
+}
+
+.watermark {
+  position: absolute;
+  opacity: .1;
+  left: 150px;
+  bottom: 50px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Akrobat ExtraLight';
+}
+
+.watermark b {
+  font-family: 'Akrobat ExtraBold Regular';
+}
+
+/* cupom::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 4px;
+  left: -2px;
+  height: 70%;
+  border-radius: 30px;
+  background-color: #848CEB;
+  transform: translate(0,-50%);
+} */
+
+/* cupom .text i {
+  color: #848CEB;
+} */
+
+/* =============================================== */
+
+.userGun-container {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 140px;
+    height: 60px;
+    background-color: rgba(17, 17, 17, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    /* background-image: url(https://cdn.discordapp.com/attachments/893276914851147826/975220191036309524/unknown.png); */
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding: 5px 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    font-family: 'Akrobat';
+    font-style: normal;
+    font-weight: 800;
+    color: white;
+}
+
+.userGun-container p {
+    font-size: 14px;
+    margin-right: 3px;
+}
+
+.userGun-container span {
+    font-size: 10px;
+    margin-bottom: 2px;
+    color: rgba(255, 255, 255, 0.676);
+}
+
+.userGun-container::before  {
+    content: '';
+    display: block;
+    height: 40px;
+    width: 2px;
+    background: #848CEB;
+    position: absolute;
+    left: -2px;
+
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100px;
+
+}

@@ -1,0 +1,412 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/ttlakes.eot"); /* IE9*/
+  src: url("../fonts/ttlakes.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/ttlakes.woff2") format("woff2"),
+    /* chrome、firefox */ url("../fonts/ttlakes.woff") format("woff"),
+    /* chrome、firefox */ url("../fonts/ttlakes.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("../fonts/ttlakes.svg") format("svg"); /* iOS 4.1- */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: none;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: "TT Lakes";
+}
+
+/*
+==============================================
+  Containers
+==============================================
+*/
+
+#notifications {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  position: relative;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s;
+  padding: 20px 15px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  background: linear-gradient(
+      62.99deg,
+      #848CEB,
+      rgba(18, 172, 90, 0)
+    ),
+    rgba(17, 17, 17, 0.75);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+}
+
+.icon {
+  height: 1.05rem;
+  float: left;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  width: 1.3rem;
+}
+
+.notifyText {
+  margin: 0.2rem 0 0.2rem 1.9rem;
+  width: 15rem;
+  /* float: left; */
+  display: inline-block;
+}
+
+.notifyText h1 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.notifyText p {
+  max-width: 250px;
+  word-wrap: break-word;
+
+  font-family: "TT Lakes";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.progress {
+  height: 3px;
+  width: calc(100% - 2rem);
+  border-radius: 30px;
+  background: rgba(17, 17, 17, 0.15);
+  position: absolute;
+  bottom: 0px;
+  left: 1rem;
+  border-radius: 2px;
+}
+
+.progressValue {
+  width: 100%;
+  height: 2px;
+  border-radius: 30px;
+  background: #848CEB;
+}
+
+.normal {
+  left: 3rem;
+  bottom: 400px;
+  align-items: flex-start;
+}
+
+.bottom {
+  left: 50%;
+  bottom: 180px;
+  align-items: center;
+  transform: translate(-50%, 0);
+}
+
+.right {
+  position: absolute;
+  bottom: 200px;
+  right: 2rem;
+  align-items: flex-end;
+}
+
+.left {
+  position: absolute;
+  top: 160px;
+  right: -5px;
+  align-items: flex-end;
+}
+
+.center {
+  left: 50%;
+  top: 80px;
+  align-items: center;
+  transform: translate(-50%, 0);
+}
+
+#default img {
+  display: none !important;
+}
+
+#default {
+  fill: #848CEB !important;
+}
+#importante {
+  fill: #848CEB !important;
+}
+#sucesso {
+  fill: #848CEB !important;
+}
+#negado {
+  fill: #848CEB !important;
+}
+#aviso {
+  fill: #848CEB !important;
+}
+
+voipStatus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+voipStatus small {
+  font-size: 11px;
+  margin-top: 5px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+voipStatus b {
+  color: #848CEB;
+}
+
+.notifyAll span {
+  font-family: "TT Lakes";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 11px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.notifyAll span .id {
+  color: rgba(255, 255, 255, 0.4);
+  margin-left: 0.1rem;
+}
+
+notify-kills {
+  position: absolute;
+  top: 200px;
+  /* zoom: .75; */
+  right: 3rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+notify-kills .notifyKill-container {
+  position: relative;
+  display: flex;
+  color: #fff;
+  padding: 4px 20px;
+  align-items: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  animation: fadeIn 0.5s ease-in;
+  background: linear-gradient(
+      62.99deg,
+      rgba(17, 17, 17, 0.65) -20.03%,
+      rgba(17, 17, 17, 0) 89.86%
+    ),
+    rgba(17, 17, 17, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+}
+
+notify-kills .notifyKill-container .weapon {
+  position: relative;
+  margin: 0 0.5rem;
+  width: 60px;
+  padding: 6px;
+  height: 30px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  /* background: rgba(17, 17, 17, 0.4); */
+}
+
+notify-kills .notifyKill-container .weapon img {
+  margin: 0 0.25rem;
+  width: 2.5rem;
+}
+
+notify-kills .notifyKill-container .weapon img.headshot {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+notify-kills .notifyKill-container .dicon {
+  position: relative;
+  margin: 0 0 0 0.75rem;
+  width: 20px;
+  padding: 6px;
+  height: 30px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  /* background: rgba(17, 17, 17, 0.4); */
+}
+
+notify-kills .notifyKill-container .dicon img {
+  transform: scaleX(-1);
+  margin: 0 0.25rem;
+  width: 0.875rem;
+}
+
+notify-kills .notifyKill-container .dicon img.headshot {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+notify-kills .notifyKill-container .notify-inner {
+  display: flex;
+  align-items: center;
+}
+
+/* @keyframes pulse-green {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 #111111;
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px #11111100;
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 #11111121;
+	}
+} */
+
+.news {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.news .n-progress {
+  width: 3px;
+  height: 68px;
+  background: linear-gradient(
+      44.76deg,
+      rgba(17, 17, 17, 0.65) -22.92%,
+      rgba(9, 9, 9, 0) 49.78%
+    ),
+    rgba(17, 17, 17, 0.75);
+  border-radius: 4px;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.news .n-progress .n-progress-value {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      44.76deg,
+      #848CEB -22.92%,
+      #848CEB 49.78%
+    ),
+    rgba(17, 17, 17, 0.75) !important;
+  border-radius: 4px;
+}
+
+.news .news-content {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: linear-gradient(
+    62.99deg,
+    #848CEB,
+    rgba(18, 172, 90, 0)
+  ),
+  rgba(17, 17, 17, 0.75);
+box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  height: 68px;
+  min-width: 317px;
+
+  margin-left: 6px;
+  padding: 0 20px;
+}
+
+.news .news-content .news-icon {
+  margin-right: 16px;
+}
+
+.news .news-content .news-message h3 {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 11px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.news .news-content .news-message h3 b {
+  color: #848CEB;
+}
+
+.news .news-content .news-message p {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.news-list {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  top: 95px;
+  right: 30px;
+  position: absolute;
+}
+
+@keyframes news-progress {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}

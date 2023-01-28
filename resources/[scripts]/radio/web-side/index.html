@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+    <div class="radio-image">
+        <div class = 'radio'>
+            <header>
+                <img src="images/signal.svg" alt="" style="height: 15px">
+                <p class = 'volumeText'>VOL <strong>20%</strong></p>
+                <img src="images/battery.svg" alt="" style="height: 22px">
+            </header>
+            <main>
+                <div class = 'freq-container'>
+                    <h1><input type = 'number' value = '123' oninput="validity.valid||(value='');" onchange = 'changeFreq(event)' id = 'freq' />MHz</h1>
+                    <p>Frequência</p>
+                </div>
+    
+                <img src="images/sound.svg" alt="">
+            </main>
+    
+            <div class = 'configure-container'>
+                <img class = 'turn-image' src="images/turnon.svg" alt="" onclick = 'turn_off_radio(event)' data-on = '0' style = 'opacity: 50%;'>
+    
+                <div class = 'sound-container'>
+                    <img src="images/sound2.svg" alt="">
+                    <input type="range" oninput = 'changeVolume(event)'>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="radio-speakers" style="display: none;"></div>
+
+    <script src="script.js"></script>
+    <script>
+        var foo = document.querySelector("#freq");
+        var f = maxNumber(999);
+    
+        foo.addEventListener('keyup', f);
+        foo.addEventListener('blur', f);
+    
+        function maxNumber(max){
+          var running = false;
+    
+          return function () {
+            if (running) return;
+    
+            running = true;
+    
+            if (parseFloat(this.value) > max) {
+              this.value = 999;
+            }
+    
+            running = false;
+         }}
+    </script>
+</body>
+</html>

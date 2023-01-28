@@ -1,0 +1,122 @@
+::-webkit-scrollbar { display: none; }
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+* {
+	user-select: none;
+	box-sizing: border-box;
+	text-rendering: auto;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#notifyitens {
+	position: absolute;
+	top: 50%;
+	right: 100px;
+	display: flex;
+	flex-direction: column;
+	transform: translate(0,-50%);
+}
+
+.item {
+	position: relative;
+	width: 100px;
+	height: 120px;
+	color: #fff;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	background: rgba(0, 0, 0, 0.5);
+	border: 2px solid rgba(255, 255, 255, 0.20);
+	animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.item:last-child {
+	margin-bottom: 0;
+}
+
+.item::before {
+	content: '';
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 70%;
+  height: 3px;
+  border-radius: 30px;
+  background-color: #848CEB;
+  transform: translate(-50%,0%);
+}
+
+.item img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-width: 80px;
+	transform: translate(-50%,-50%);
+}
+
+.item .info-item {
+	position: absolute;
+	display: flex;
+	bottom: 0;
+	width: 100%;
+	height: 20px;
+	align-items: center;
+}
+
+.itemRecive {
+	color: #fff;
+	display: flex;
+	height: 100%;
+	padding: 0 4px;
+	font-size: 10px;
+	align-items: center;
+	text-transform: uppercase;
+	justify-content: center;
+	background-color: rgba(6, 6, 6, 0.3);
+}
+
+.nameItem {
+	bottom: 10px;
+	width: 100%;
+	font-size: 7px;
+	text-align: center;
+	height: 100%;
+	display: flex;
+	padding: 0 2px;
+	font-weight: 500;
+	align-items: center;
+	letter-spacing: .5px;
+	justify-content: center;
+	text-transform: uppercase;
+	border-bottom-left-radius: 2px;
+	background-color: rgba(6, 6, 6, 0.3);
+}
+
+.item-mode {
+	position: absolute;
+	left: 50%;
+	top: 10px;
+	color: #fff;
+	font-size: 7px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transform: translate(-50%,0);
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

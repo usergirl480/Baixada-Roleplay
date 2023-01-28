@@ -1,0 +1,638 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: url("./fonts/ttlakes.eot"); /* IE9*/
+  src: url("./fonts/ttlakes.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/ttlakes.woff2") format("woff2"),
+    /* chrome、firefox */ url("./fonts/ttlakes.woff") format("woff"),
+    /* chrome、firefox */ url("./fonts/ttlakes.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("./fonts/ttlakes.svg") format("svg"); /* iOS 4.1- */
+}
+@font-face {
+  font-family: "TT Lakes Bold";
+  src: url("./fonts/TTLakes-Bold.ttf"); /* IE9*/
+  src: url("./fonts/TTLakes-Bold.ttf") format("truetype"); /* iOS 4.1- */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* background-color: #1A2643; */
+}
+
+* {
+  outline: none;
+  user-select: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: 4rem;
+  flex-direction: column;
+  justify-content: center;
+  /* background: linear-gradient(to right, rgba(0, 0, 0, 0.788), rgba(0, 0, 0, 0.285), rgba(0, 0, 0, 0)); */
+  background: linear-gradient(
+    90deg,
+    #4b5191 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
+
+main header {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: "Arial";
+  text-transform: uppercase;
+}
+
+main header .icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  margin-right: 20px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(17, 17, 17, 0.4);
+}
+
+main header .text {
+  display: flex;
+  font-size: 12px;
+  letter-spacing: 3px;
+  flex-direction: column;
+}
+
+main header .text span {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+main section {
+  width: 370px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 42rem;
+}
+
+main .allcontent {
+  position: relative;
+  left: -6px;
+  width: 104%;
+  overflow-x: hidden;
+  padding-left: 10px;
+  margin-bottom: 7px;
+}
+
+main .shopInner {
+  width: 19.125rem;
+  /* padding: 15px; */
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  /* background: linear-gradient(90deg, rgba(17, 17, 17, 0.597) 0%, rgba(17, 17, 17, 0.42) 100%); */
+}
+
+main .shopInner .shopTitle {
+  display: flex;
+  color: #fff;
+  font-size: 10px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: space-between;
+}
+
+main .shopInner .shopTitle span {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.cams {
+  position: fixed;
+  right: 4rem;
+  display: block;
+  width: 10.2rem;
+}
+.cams .title {
+  font-family: "TT Lakes";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 0.2rem;
+}
+.cams .set-camera {
+  width: 44px;
+  height: 44px;
+  margin-right: 5px;
+  align-items: center;
+  transition: all 0.2s;
+  justify-content: center;
+  float: left;
+  display: inline-block;
+
+  background: rgba(17, 17, 17, 0.55);
+  outline: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.cams .set-camera img {
+  margin: 0.625rem;
+}
+
+.cams .set-camera:hover {
+  background: rgba(17, 17, 17, 0.75);
+}
+
+main .shopInner .inputTextures {
+  height: 45px;
+  color: rgba(255, 255, 255, 0.384);
+  font-size: 11px;
+  padding: 0 10px;
+  font-weight: 600;
+  align-items: center;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  justify-content: space-between;
+  background: rgba(17, 17, 17, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: inline-block;
+  width: 142px;
+  float: left;
+  padding: 0.5rem;
+  margin-right: 3px;
+}
+#texture-label {
+  text-align: center;
+  display: inline-block;
+  width: calc(100% - 3.35rem);
+
+  font-family: "TT Lakes";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 16px;
+  padding-top: 0.4rem;
+  color: #ffffff;
+}
+#cloth-label {
+  text-align: center;
+  display: inline-block;
+  width: calc(100% - 3.35rem);
+
+  font-family: "TT Lakes";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 16px;
+  padding-top: 0.4rem;
+  color: #ffffff;
+}
+
+main .shopInner .inputTextures .arrow {
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 12px;
+  border-radius: 3px;
+  align-items: center;
+  transition: all 0.2s;
+  justify-content: center;
+  padding: 0.4rem;
+  /* border: 1.7px solid rgba(255, 255, 255, 0.3); */
+}
+.inputTextures .arrow:hover i {
+  color: #848CEB;
+  transition: all 0.4s linear;
+}
+
+main .shopInner .shopCategory {
+  width: 100%;
+  display: flex;
+  z-index: 101;
+  flex-direction: row;
+  padding-left: 0.375rem;
+}
+
+main .shopInner .shopCategory .category {
+  width: 4.125rem;
+  height: 4.125rem;
+  display: flex;
+  border-radius: 5px;
+  margin-bottom: 6px;
+  align-items: center;
+  margin-right: 0.5rem;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.19);
+  transition: all 0.2s;
+}
+.category:last-child {
+  margin-bottom: 0;
+}
+main .shopInner .shopCategory .category img {
+  width: 1.875rem;
+}
+main .shopInner .shopContent .shopList {
+  position: relative;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+main .shopInner .shopContent .invert {
+  display: block;
+  grid-gap: 11px;
+  width: 304px;
+  max-height: 23rem;
+  overflow-y: auto;
+  margin-left: 2px;
+}
+
+main .allcontent .shop-item {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  display: block;
+  height: 87px;
+  align-items: center;
+  border-radius: 10px;
+  transition: all 0.3s;
+  justify-content: center;
+  /* background: rgba(17, 17, 17, 0.4); */
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  margin-bottom: 5px;
+}
+
+main .allcontent .shop-item .item-title {
+  font-family: "TT Lakes";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+main .allcontent .shop-item .number {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .allcontent .shop-item .img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.rotateContent {
+  position: relative;
+  width: 90%;
+  display: flex;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 15px;
+  border-radius: 7px;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+}
+.rotateContent input {
+  width: 55% !important;
+}
+.rotateContent small {
+  font-size: 8px;
+  margin-left: 3px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.rotateContent::before {
+  content: "";
+  position: absolute;
+  top: 51.5%;
+  left: 50%;
+  width: 98%;
+  height: 86%;
+  z-index: -1;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  background: rgba(17, 17, 17, 0.206);
+}
+
+footer {
+  display: flex;
+  margin-right: 4.5rem;
+}
+
+#reset {
+  margin-right: 16px;
+}
+
+footer button {
+  width: 136px;
+  float: left;
+  text-transform: uppercase;
+  font-size: 12px;
+  height: 3rem;
+  padding: 12px;
+  color: #fff;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+
+  opacity: 0.6;
+  background: linear-gradient(
+    90deg,
+    #848CEB,
+    #848CEB
+  );
+  border: 2px solid #848CEB;
+  border-radius: 10px;
+}
+
+footer button:hover {
+  opacity: 1;
+  border-radius: 10px;
+  transition: all 0.2s linear !important ;
+}
+
+footer button.inactive {
+  background: rgba(17, 17, 17, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+footer button.inactive:hover {
+  transition: all 0.2s;
+  background: rgba(17, 17, 17, 0.65);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: all 0.4s linear !important ;
+}
+footer button i {
+  margin: 0 0.3rem;
+}
+
+.subCategory {
+  height: 80px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.subCategory .option {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.285);
+}
+
+input[type="range"] {
+  width: 70%;
+  height: 10px;
+  -webkit-appearance: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  position: relative;
+  z-index: 3;
+  width: 10px;
+  height: 15px;
+  border-radius: 3px;
+  background: #848CEB;
+  -webkit-appearance: none;
+  border: 3px solid #848CEB;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 80px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 80px;
+  background: #848CEB;
+}
+
+/* .active-item, .shop-item:hover {border-color: #848CEB !important;} */
+main .flexAlign {
+  display: flex;
+  align-items: center;
+}
+main .shopInner .shopContent .shopCategory .category img,
+.set-camera img {
+  max-width: 50%;
+}
+/* #reset:hover {
+    background-color: rgba(255, 68, 68, 0.4) !important;
+  } */
+.active-item .number,
+main .shopCategory .active,
+.shop-item:hover .number,
+.shopCategory .category:hover,
+.subCategory .option:hover,
+.selected-cam,
+.selected-cam:hover {
+  background: linear-gradient(
+    90deg,
+    #848CEB 0.01%,
+    #848CEB 96.87%
+  ) !important;
+  box-shadow: inset 0 0 0 1px #848CEB;
+  border-radius: 10px;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0%;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 100%;
+  }
+}
+
+.slideIn {
+  animation-name: slideIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0%);
+    opacity: 100%;
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 0%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.slideOut {
+  animation-name: slideOut;
+  animation-duration: var(--animation-duration);
+  animation-fill-mode: forwards;
+}
+.box-header {
+  font-family: "TT Lakes";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  /* display: flex; */
+  align-items: center;
+  letter-spacing: 0.425em;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 10rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.box-header .title {
+  font-size: 15px;
+  display: block;
+  font-weight: normal;
+}
+.box-header .subtitle {
+  display: block;
+  font-family: "TT Lakes Bold";
+  font-weight: 700;
+  line-height: 29px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.rotate {
+  position: absolute;
+  left: 4rem;
+  bottom: 5rem;
+  font-family: "TT Lakes";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.rotate div {
+  font-family: "TT Lakes";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-right: 1rem;
+}
+
+.rotate div span {
+  background: rgba(17, 17, 17, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-right: 0.4rem;
+
+  font-family: "TT Lakes";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.9rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(255, 255, 255, 0.45);
+}

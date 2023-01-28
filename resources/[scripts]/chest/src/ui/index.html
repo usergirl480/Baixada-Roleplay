@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="nui://game/ui/jquery.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+		<link href="nui://inventory/web-side/src/css/app.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+
+		<main>
+			<inventory>
+				<header>
+					<div class="inventory-title">
+						<h1>inventário <span>principal</span></h1>
+						<small>Atente-se a durabilidade dos itens.</small>
+					</div>
+					<div class="inventory-weight">
+						<h2>peso</h2>
+						<span id="weightTextLeft"></span>
+	
+						<svg class="weightProgress" width="50" height="50">
+							<circle class="outer" stroke="#FFFFFF" stroke-width="2.2" style="stroke-opacity: 0.2;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="45.5 90" stroke-dashoffset="0"/>
+							<circle class="progress progress-weight" stroke="#848CEB" stroke-width="2.2" style="stroke-opacity: 1;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="45.5 90" stroke-dashoffset="0"/>
+							<defs>
+								<linearGradient id="gradient">
+									<stop offset="30%" stop-color="#ffff" />
+									<stop offset="100%" stop-color="#fff" />
+								</linearGradient>
+							</defs>
+						</svg>
+	
+					</div>
+				</header>
+				<section class="invLeft"></section>
+			</inventory>
+	
+			<inventoryActions>
+				<input class="amount" placeholder="QTD" type="number" onKeyPress="if (this.value.length==9) return false;" />
+			</inventoryActions>
+			
+			<inventory>
+				<header>
+					<div class="inventory-title">
+						<h1>inventário <span>secundário</span></h1>
+						<small>Essencial para proteger os seus itens.</small>
+					</div>
+					<div class="inventory-weight">
+						<h2>PESO</h2>
+						<span id="weightTextRight"></span>
+
+						<svg class="weightProgress" width="50" height="50">
+							<circle class="outer" stroke="#FFFFFF" stroke-width="2.2" style="stroke-opacity: 0.2;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="45.5 90" stroke-dashoffset="0"/>
+							<circle class="progress progress-weight2" stroke="#848CEB" stroke-width="2.2" style="stroke-opacity: 1;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="45.5 90" stroke-dashoffset="0"/>
+							<defs>
+								<linearGradient id="gradient">
+									<stop offset="30%" stop-color="#ffff" />
+									<stop offset="100%" stop-color="#fff" />
+								</linearGradient>
+							</defs>
+						</svg>
+
+					</div>
+				</header>
+				<section class="invRight"></section>
+			</inventory>
+		</main>
+
+		<script src="jquery.js"></script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="nui://game/ui/jquery.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="display:none">
+    <main>
+        <header>
+            <div class="icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="text">
+                <small>itens</small>
+                <span>rotas</span>
+            </div>
+        </header>
+        <section>
+            <div class="allcontent">
+                <div class="revert items-container" style="direction:ltr"></div>
+            </div>
+            <footer class="flexAlign">
+                <button onclick="Main.exit()">Fechar</button>
+                <button onclick="Main.startRoute()">Confirmar</button>
+            </footer>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
+
+<!-- 
+<main>
+    <div class = 'page-button' onclick="Main.previousPage()">
+        <i class="fa-solid fa-chevron-left"></i>
+    </div>
+    <div class = 'items-container'></div>
+    <div class = 'page-button' onclick = 'Main.nextPage()'>
+        <i class="fa-solid fa-chevron-left" style = 'transform: rotate(180deg);'></i>
+    </div>
+</main>
+
+<div class = 'buttons-container'>
+    <div class = 'button' onclick = 'Main.exit()'>
+        <h1>FECHAR</h1>
+        <p>close</p>
+    </div>
+    <div class = 'button' onclick="Main.startRoute()">
+        <h1>INICIAR</h1>
+        <p>iniciar</p>
+    </div>
+</div> -->

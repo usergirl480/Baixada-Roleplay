@@ -1,0 +1,180 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+::-webkit-inner-spin-button {
+    display: none;
+}
+
+.radio-image {
+    background-image: url(https://media.discordapp.net/attachments/831121612300091422/885109488288419900/unknown.png);
+    background-position: 0px -130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 420px;
+    width: 290px;
+    
+    position: absolute;
+    bottom: -100vh;
+    right: 400px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    transition: all 2s;
+
+
+}
+
+.radio {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #848CEB;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom: none;
+    border-radius: 5px 5px 0px 0px;
+    padding: 0px 20px;
+    margin-right: 8px;
+    box-shadow: 0px 0px 50px #a6f39a1c;
+}
+
+.radio header {
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.radio header p {
+    font-family: 'SF Pro Display';
+    color: white;
+    font-size: 14px;
+}
+
+/* ----------------------------------------------------------- */
+
+.radio main {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio main img {
+    height: 40px;
+}
+
+.freq-container {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.freq-container h1 { 
+    display: flex;
+    width: 100%;
+    font-family: 'SF Pro Display';
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.freq-container h1 input {
+    outline: none;
+    border: none;
+    width: 43px;
+    font-family: 'SF Pro Display';
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.freq-container p {
+    font-family: 'SF Pro Display';
+    color: #e9e9e9;
+    font-weight: 500;
+}
+
+/* ----------------------------------------------------------- */
+
+.configure-container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.turn-image {
+    height: 40px;
+    transition: all .2s;
+}
+
+/* --------------------------------------------------------------------------- */
+
+.sound-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sound-container img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.sound-container input {
+    width: 70px !important;
+    border-radius: 1000px;
+}
+
+.radio-speakers {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-speakers .people {
+    display: flex;
+    color: #fff;
+    font-size: 11px;
+    margin-bottom: 7px;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'SF Pro Display';
+}
+
+.radio-speakers .people p {
+    max-width: 130px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.radio-speakers .people i {
+    color: #848CEB;
+    margin-left: 5px;
+}

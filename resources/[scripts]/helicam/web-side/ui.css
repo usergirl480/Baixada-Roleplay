@@ -1,0 +1,294 @@
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.heliCam {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #151515;
+  font-family: "VCR OSD Mono", monospace;
+  color: #fff;
+}
+
+.heliCam .heliArea {
+  padding: 25px 28px;
+  width: 92%;
+  height: 87%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+}
+
+.heliCam .heliArea .lineContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.heliCam .heliArea .lineContainer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.heliCam .heliArea .lineContainer div .contentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.heliCam .heliArea .lineContainer div .contentContainer #timeInfo {
+  margin-left: 10px;
+}
+
+.heliCam .heliArea .lineContainer div .contentContainer #selfSpeed,
+.heliCam .heliArea .lineContainer div .contentContainer #selfAlt,
+.heliCam .heliArea .lineContainer div .contentContainer #selfHeading {
+  margin-right: 20px;
+}
+
+.heliCam .heliArea .lineContainer .leftContent {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.heliCam .heliArea .lineContainer .centerContent {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.heliCam .heliArea .lineContainer .rightContent {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.heliCam .heliArea .lineContainer .rightContent .contentGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#zoom, #spotlight {
+  width: 250px;
+}
+
+#rangePerc, #rangePercSpotlight {
+  margin-left: 10px;
+  line-height: 18px;
+}
+
+#pointer, #pointer2 {
+  transform-box: fill-box;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+#camHDG {
+  margin-bottom: 5px;
+}
+
+.noise {
+  position: absolute;
+  top: -500px;
+  right: -500px;
+  bottom: -500px;
+  left: -500px;
+  overflow: hidden;
+  background-size: 320px 320px;
+  -webkit-animation: noise 0.5s steps(8, end) infinite both;
+  animation: noise 0.5s steps(8, end) infinite both;
+  background: transparent 0 0;
+  opacity: .1;
+  z-index: 999;
+  background-image: url("noise.png");
+}
+
+@-webkit-keyframes noise {
+  0% {
+    -webkit-transform: translateX(0, 0);
+    transform: translateX(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(-100px, 100px);
+    transform: translate(-100px, 100px);
+  }
+  20% {
+    -webkit-transform: translate(150px, -100px);
+    transform: translate(150px, -100px);
+  }
+  30% {
+    -webkit-transform: translate(-100px, 100px);
+    transform: translate(-100px, 100px);
+  }
+  40% {
+    -webkit-transform: translate(100px, -150px);
+    transform: translate(100px, -150px);
+  }
+  50% {
+    -webkit-transform: translate(-100px, 200px);
+    transform: translate(-100px, 200px);
+  }
+  60% {
+    -webkit-transform: translate(-200px, -100px);
+    transform: translate(-200px, -100px);
+  }
+  70% {
+    -webkit-transform: translateY(50px, 100px);
+    transform: translateY(50px, 100px);
+  }
+  80% {
+    -webkit-transform: translate(100px, -150px);
+    transform: translate(100px, -150px);
+  }
+  90% {
+    -webkit-transform: translate(0, 200px);
+    transform: translate(0, 200px);
+  }
+  100% {
+    -webkit-transform: translate(-100px, 100px);
+    transform: translate(-100px, 100px);
+  }
+}
+
+@keyframes noise {
+  0% {
+    -webkit-transform: translateX(0, 0);
+    transform: translateX(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(-100px, 100px);
+    transform: translate(-100px, 100px);
+  }
+  20% {
+    -webkit-transform: translate(150px, -100px);
+    transform: translate(150px, -100px);
+  }
+  30% {
+    -webkit-transform: translate(-100px, 100px);
+    transform: translate(-100px, 100px);
+  }
+  40% {
+    -webkit-transform: translate(100px, -150px);
+    transform: translate(100px, -150px);
+  }
+  50% {
+    -webkit-transform: translate(-100px, 200px);
+    transform: translate(-100px, 200px);
+  }
+  60% {
+    -webkit-transform: translate(-200px, -100px);
+    transform: translate(-200px, -100px);
+  }
+  70% {
+    -webkit-transform: translateY(50px, 100px);
+    transform: translateY(50px, 100px);
+  }
+  80% {
+    -webkit-transform: translate(100px, -150px);
+    transform: translate(100px, -150px);
+  }
+  90% {
+    -webkit-transform: translate(0, 200px);
+    transform: translate(0, 200px);
+  }
+  100% {
+    -webkit-transform: translate(-100px, 100px);
+    transform: translate(-100px, 100px);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+/*# sourceMappingURL=ui.css.map */

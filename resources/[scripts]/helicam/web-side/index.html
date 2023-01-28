@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helicam</title>
+  <link rel="stylesheet" href="./ui.css" />
+  <link rel="stylesheet" href="./custom.css" />
+</head>
+
+<body class="hide">
+  <div class="noise"></div>
+  <section class="heliCam">
+    <div class="heliArea">
+      <div class="lineContainer">
+        <div class="leftContent"></div>
+        <div class="centerContent">
+          <div id="camtypeInfo"></div>
+        </div>
+        <div class="rightContent">
+          <div class="contentContainer">
+            <div class="departmentInfo">
+              Baixada Air Department
+            </div>
+          </div>
+          <div class="contentContainer">
+            <div id="dateInfo"></div>
+            <div id="timeInfo"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lineContainer">
+        <div class="leftContent"></div>
+        <div class="centerContent"></div>
+        <div class="rightContent">
+          <div class="contentGroup" style="align-items: flex-end;">
+            <div id="camHDG"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" height="100px" width="100px" viewBox="0 0 144 144">
+              <path fill="white"
+                d="M74.5,0h-5V7.06A65,65,0,0,0,7.06,69.5H0v5H7.06A65,65,0,0,0,69.5,136.94V144h5v-7.06A65,65,0,0,0,136.94,74.5H144v-5h-7.06A65,65,0,0,0,74.5,7.06V0Zm-5,15h5V12.06A60.08,60.08,0,0,1,131.94,69.5H129v5h2.94A60.08,60.08,0,0,1,74.5,131.94V129h-5v2.94A60.08,60.08,0,0,1,12.06,74.5H15v-5H12.06A60.08,60.08,0,0,1,69.5,12.06V15Z" />
+              <g id="pointer" data-name="pointer">
+                <rect fill="none" width="144" height="144" />
+                <path fill="white" opacity="0.5"
+                  d="M95.68,16.88A59.65,59.65,0,0,0,74.5,12.06V15h-5V12.06a59.65,59.65,0,0,0-21.18,4.82l-.46.2L69.5,68.74,70.86,72h2.28l1.36-3.26L96.14,17.08Z" />
+                <path fill="white"
+                  d="M69.5,67.44,48.32,16.88l-.46.2-.46.2L69.5,70l.82,2h1.09ZM96.14,17.08l-.46-.2L74.5,67.44,72.59,72h1.09l.82-2L96.6,17.28Z" />
+                <rect fill="white" x="69.5" y="10" width="5" height="62" />
+              </g>
+            </svg>
+          </div>
+          <br>
+          <div class="contentGroup" style="align-items: flex-end;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100px" width="100px" viewBox="0 0 144 144">
+              <path fill="white"
+                d="M136.94,69.5A65,65,0,0,0,74.5,7.06V0h-5V15h5V12.06A60.08,60.08,0,0,1,131.94,69.5H129v5h2.94A60.08,60.08,0,0,1,74.5,131.94V129h-5v2.94A60.08,60.08,0,0,1,12.06,74.5H15v-5H0v5H7.06A65,65,0,0,0,69.5,136.94V144h5v-7.06A65,65,0,0,0,136.94,74.5H144v-5Z" />
+              <g id="pointer2" data-name="pointer2">
+                <rect fill="none" width="144" height="144" />
+                <path fill="white" opacity="0.5"
+                  d="M95.68,16.88A59.65,59.65,0,0,0,74.5,12.06V15h-5V12.06a59.65,59.65,0,0,0-21.18,4.82l-.46.2L69.5,68.74,70.86,72h2.28l1.36-3.26L96.14,17.08Z" />
+                <path fill="white"
+                  d="M69.5,67.44,48.32,16.88l-.46.2-.46.2L69.5,70l.82,2h1.09ZM96.14,17.08l-.46-.2L74.5,67.44,72.59,72h1.09l.82-2L96.6,17.28Z" />
+                <rect fill="white" x="69.5" y="10" width="5" height="62" />
+              </g>
+            </svg>
+            <div id="camELV"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lineContainer">
+        <div class="leftContent">
+          <div class="contentGroup" style="width: 100%; align-items: flex-start;">
+            ZOOM
+            <div class="contentContainer" style="align-items: center;">
+              <input type="range" class="styled-slider slider-progress" id="zoom" min="35" max="180">
+              <div id="rangePerc"></div>
+            </div>
+            SPOTLIGHT
+            <div class="contentContainer" style="align-items: center;">
+              <input type="range" class="styled-slider slider-progress" id="spotlight" min="0" max="1">
+              <div id="rangePercSpotlight"></div>
+            </div>
+            <br>
+            <div class="contentContainer">
+              <div id="selfRoadName"></div>
+            </div>
+          </div>
+        </div>
+        <div class="centerContent">
+          <div class="contentGroup" style="align-items: center; justify-content: flex-end; height: 100%;">
+            <div class="contentContainer">
+              <div id="vehSpeed"></div>
+            </div>
+            <div class="contentContainer">
+              <div id="vehPlate"></div>
+            </div>
+            <div class="contentContainer">
+              <div id="vehLocation"></div>
+            </div>
+          </div>
+        </div>
+        <div class="rightContent">
+          <div class="contentGroup">
+            <div class="contentContainer">
+              <div id="selfSpeed"></div>SPEED KMH
+            </div>
+            <div class="contentContainer">
+              <div id="selfAlt"></div>ALT FT AMSL
+            </div>
+            <div class="contentContainer">
+              <div id="selfHeading"></div>HDG DEG
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="crosshair">
+    <div class="crosshair-line"></div>
+    <div class="crosshair-line"></div>
+    <div class="crosshair-line"></div>
+    <div class="crosshair-line"></div>
+  </div>
+
+  <script>
+    var camtype = '';
+    window.addEventListener("message", (event) => {
+      switch (event.data.type) {
+        case 'update':
+          loadCamInfo(event)
+          break;
+        case 'show':
+          initDate();
+          document.body.classList.remove("hide");
+          break;
+        case 'hide':
+          document.body.classList.add("hide");
+          break;
+      }
+    });
+
+    let currentDate = new Date(0);
+    setInterval(initDate, 1000);
+
+    function getDateText() {
+      return `${currentDate.getDate().toString().padStart(2, "0")}-${formtMonth(currentDate.getMonth() + 1)}-${currentDate.getFullYear()}`;
+    }
+
+    function getPercent() {
+      return Math.round((((document.getElementById("zoom").value - 35) * 100) / (180 - 35))) + '%';
+    }
+
+    function initDate() {
+      currentDate = new Date();
+
+      document.getElementById("dateInfo").innerText = getDateText();
+      document.getElementById("timeInfo").innerText =
+        `${currentDate.getHours().toString().padStart(2, "0")}:${currentDate.getMinutes().toString().padStart(2, "0")}:${currentDate.getSeconds().toString().padStart(2, "0")}`;
+    }
+
+    function loadCamInfo(event) {
+      document.getElementById("zoom").value = Math.round(200 - event.data.info.zoom * 1.5);
+      if (camtype !== event.data.info.camtype) {
+        formatCamtype(event.data.info.camtype);
+        camtype = event.data.info.camtype;
+      }
+
+      document.getElementById("rangePerc").innerText = getPercent();
+      document.getElementById("vehPlate").innerText = event.data.info.vehPlate;
+      document.getElementById("vehLocation").innerText = event.data.info.vehRoadName;
+      document.getElementById("selfRoadName").innerText = HelicopterCompass(event.data.info.selfHeading) + ' ' + event.data.info.selfRoadName;
+      document.getElementById("vehSpeed").innerText = event.data.info.vehSpeed;
+      document.getElementById("selfSpeed").innerText = formatValue(Math.round(event.data.info.selfSpeed * 3.6));
+      document.getElementById("selfAlt").innerText = formatValue(Math.round(event.data.info.selfAlt * 3.5));
+      document.getElementById("selfHeading").innerText = formatValue((Math.floor(event.data.info.selfHeading * -1) +
+        360));
+
+
+
+      if (Math.round(event.data.info.camHDG) < 0) {
+        document.getElementById("camHDG").innerText = Math.abs(Math.round(event.data.info.camHDG)) + '°';
+        document.getElementById("pointer").style.transform = `rotate(${Math.abs(Math.round(event.data.info.camHDG))}deg)`;
+      } else {
+        document.getElementById("camHDG").innerText = ((Math.round(event.data.info.camHDG) * -1) + 360) + '°';
+        document.getElementById("pointer").style.transform = `rotate(${((Math.round(event.data.info.camHDG) * -1) + 360)}deg)`;
+      }
+
+      var elvPos = Math.round(event.data.info.camELV) * -1;
+      document.getElementById("pointer2").style.transform = `rotate(${elvPos + 90}deg)`;
+      document.getElementById("camELV").innerText = elvPos + '°';
+
+      document.getElementById("spotlight").value = event.data.info.spotlight ? 1 : 0;
+      if (event.data.info.spotlight) {
+        document.getElementById("rangePercSpotlight").innerHTML = '100%'
+      } else {
+        document.getElementById("rangePercSpotlight").innerHTML = '0%'
+      }
+      updateRange();
+    }
+
+    function formatCamtype(camtype) {
+      document.getElementById("camtypeInfo").innerText = camtype === 0 ? "- DEFAULT -" : "- NIGHT -";
+      document.getElementById("camtypeInfo").classList.remove('fadeOutUp');
+      setTimeout(() => {
+        document.getElementById("camtypeInfo").classList.add('fadeOutUp');
+      }, 1500);
+    }
+
+    function formatValue(value) {
+      var strSize = value.toString().length;
+      var strValue = value.toString()
+      if (strSize < 4) {
+        strSize = 4 - strSize;
+        for (i = 0; i < strSize; i++) {
+          strValue = 0 + strValue;
+        }
+      }
+
+      return strValue;
+    }
+
+    function formtMonth(month) {
+      switch (month) {
+        case 1:
+          return "JAN";
+        case 2:
+          return "FEV";
+        case 3:
+          return "MAR";
+        case 4:
+          return "ABR";
+        case 5:
+          return "MAI";
+        case 6:
+          return "JUN";
+        case 7:
+          return "JUL";
+        case 8:
+          return "AGO";
+        case 9:
+          return "SET";
+        case 10:
+          return "OUT";
+        case 11:
+          return "NOV";
+        case 12:
+          return "DEZ";
+        default:
+          return "??";
+      }
+    }
+
+    function HelicopterCompass(hdg) {
+      let direction = Math.floor((hdg + 22.5) / 45);
+
+      const hdgToDir = (direction) => {
+        switch (direction) {
+          case 0:
+          case 8:
+          default:
+            return "N";
+          case 1:
+            return "NW";
+          case 2:
+            return "W";
+          case 3:
+            return "SW";
+          case 4:
+            return "S";
+          case 5:
+            return "SE";
+          case 6:
+            return "E";
+          case 7:
+            return "NE";
+        }
+      };
+
+      return hdgToDir(direction) + ` |`;
+    }
+
+    function updateRange() {
+      for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+        e.style.setProperty('--value', e.value);
+        e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+        e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+        e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+      }
+    }
+  </script>
+</body>
+
+</html>

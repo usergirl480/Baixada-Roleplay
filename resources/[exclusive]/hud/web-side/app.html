@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/app.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+</head>
+    <body style = 'display: none'>
+        <img id="logo" src="https://cdn.discordapp.com/attachments/1065406615219613737/1068301993627631677/Sem_Titulo-1.png">
+
+        <div class="playerHud" >
+            <div class="circle progressTimer" style="display: none">
+              <svg class="svgCircle">
+                  <circle circle class="circleBack" r="18" cx="50%" cy="50%" ></circle>
+                  <circle class="progressTimerFill circleFill" r="18" cx="50%" cy="50%" ></circle>
+              </svg>
+              <i class="fa-solid fa-clock"></i>
+            </div>
+      
+            <div class="circle" style="transform: scaleX(-1);">
+              <svg class="svgCircle">
+                  <circle circle class="circleBack" r="18" cx="50%" cy="50%" ></circle>
+                  <circle class="lifeFill circleFill" r="18" cx="50%" cy="50%" ></circle>
+              </svg>
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+      
+            <div class="circle">
+              <svg class="svgCircle">
+                  <circle circle class="circleBack" r="18" cx="50%" cy="50%" ></circle>
+                  <circle class="shieldFill circleFill" r="18" cx="50%" cy="50%" ></circle>
+              </svg>
+              <i class="fa-solid fa-shield-blank"></i>
+            </div>
+      
+            <div class="circle">
+              <svg class="svgCircle">
+                  <circle circle class="circleBack" r="18" cx="50%" cy="50%" ></circle>
+                  <circle class="stressFill circleFill" r="18" cx="50%" cy="50%" ></circle>
+              </svg>
+              <i class="fa-solid fa-brain"></i>
+            </div>
+      
+            <div class="circle">
+              <svg class="svgCircle">
+                  <circle circle class="circleBack" r="18" cx="50%" cy="50%" ></circle>
+                  <circle class="foodFill circleFill" r="18" cx="50%" cy="50%" ></circle>
+              </svg>
+              <i class="fa-solid fa-burger-cheese"></i>
+            </div>
+      
+            <div class="circle">
+              <svg class="svgCircle">
+                  <circle circle class="circleBack" r="18" cx="50%" cy="50%" ></circle>
+                  <circle class="waterFill circleFill" r="18" cx="50%" cy="50%" ></circle>
+              </svg>
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <div class="microphone">
+              <i class="fa-solid fa-circle-microphone"></i>
+              <test style="transform: rotate(180deg);">
+                <div class="micStatus qTalk"></div>
+                <div class="micStatus qTalk"></div>
+                <div class="micStatus qTalk"></div>
+                <div class="micStatus qTalk"></div>
+              </test>
+            </div>
+        </div>
+
+        <div class="velocimeterHud" style = 'display: none'>
+        <svg class="circle speedoMeter" width="50" height="50">
+            <circle stroke-linecap="round" class="outer" stroke="rgba(0, 0, 0, 0.7)" stroke-width="2.5" style="stroke-opacity: 0.2;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="38.7 90" stroke-dashoffset="0"/>
+            <circle stroke-linecap="round" class="progress progress-speed" stroke="#848CEB" stroke-width="2.5" style="stroke-opacity: 1;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="20.7 90" stroke-dashoffset="0"/>
+        </svg>
+
+        <div class="engineCircle">
+            <svg class="svgCircle">
+                <circle circle class="circleBack" r="18" cx="50%" cy="50%" stroke-linecap="round"></circle>
+                <circle class="engineFill circleFill" r="18" cx="50%" cy="50%" stroke-linecap="round"></circle>
+            </svg>
+            <i class="fa-solid fa-wrench"></i>
+        </div>
+
+        <div class="carFuel">
+            <svg class="fuelCircle" width="50" height="50">
+            <circle stroke-linecap="round" class="outer" stroke="rgba(0, 0, 0, 0.7)" stroke-width="1" style="stroke-opacity: 0.2;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="15.5 100" stroke-dashoffset="0"/>
+            <circle stroke-linecap="round" class="progress progress-fuel" stroke="#848CEB" stroke-width="1" style="stroke-opacity: 1;" fill="transparent" r="18" cx="26" cy="26" stroke-dasharray="20 90" stroke-dashoffset="0"/>
+            </svg>
+            <i class="fa-solid fa-gas-pump"></i>
+        </div>
+
+        <div class="carMarch"></div>
+
+        <div class="text">
+            <h1 class="velo">000</h1>
+            <span>MPH</span>
+        </div>
+
+        <img src="src/img/belt.svg" class="seatbelt">
+
+        <div class="carInfo">
+            <img src="src/img/arrow.svg" class="lightCar" id="lightLeft" style="transform: scaleX(-1);">
+            <img src="src/img/arrow.svg" class="lightCar" id="lightRight">
+        </div>
+        </div>
+
+        <div class="serverInfos">
+        <div class="progressBar" style="display:none"><div class="fill"></div></div>
+        <div class="item radio" style="display: none;"></div>
+
+        <div class="item assaultItem" style="display: none;">
+            <div class="icon">
+            <i class="fa-solid fa-gun"></i>
+            </div>
+            <span class="hour2">ASSALTO LIBERADO</span>
+        </div>
+
+        <div class="item">
+            <div class="icon">
+            <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <span class="location">Rua cupom de sousa</span>
+        </div>
+        <div class="item hourItem">
+            <div class="icon">
+            <i class="fa-solid fa-clock-seven"></i>
+            </div>
+            <span class="hour">00:00</span>
+        </div>
+
+        
+        </div>
+
+        <div class="driftPoints" style="display: none;">
+        <small>drift points</small>
+        <span>2,192</span>
+        </div>
+
+        <div class="watermark"><b>BAIXADA</b> © 2022 - Todos os direitos reservados</div>
+
+        <terms style="display:none">
+        <!-- <img src="https://media.discordapp.net/attachments/956015037598806106/966044256756183060/02.png?width=1440&height=507" id="bg"> -->
+        <img src="https://cdn.discordapp.com/attachments/761279588537073684/972377530411679815/01-2.png">
+        <h1>TERMOS DO SERVIDOR</h1>
+        <h2>Por meio deste, concordo com os termos de jogabilidade do Baixada, sendo eles:</h2>
+        <div class="terms-content">
+            <div class="term-item"><div class="number">1</div><p>Ter a whitelist suspensa permanente em todos os servidores do WRENCH por suspeita ou uso de cheating.</p></div>
+            <div class="term-item"><div class="number">2</div><p>Total responsabilidade pelas compras realizadas através da loja VIP.</p></div>
+            <div class="term-item"><div class="number">3</div><p>Não ser racista, homofóbico, transfóbico, machista, tal como nenhuma outra forma de preconceito.</p></div>
+            <div class="term-item"><div class="number">4</div><p>Má conduta ou vocabulário impróprio resultará em whitelist suspensa.</p></div>
+            <div class="term-item"><div class="number">5</div><p>Possuir um microfone aceitável.</p></div>
+        </div>
+        <div class="terms-form" style="display:none">
+            <div class="input-content">
+            <div class="icon"><i class="fa-solid fa-user"></i></div>
+            <input type="text" placeholder="Insira seu nome">
+            </div>
+            <div class="input-content">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <input type="email" placeholder="Insira seu e-mail">
+            </div>
+            <div class="input-content">
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <input type="number" placeholder="Insira seu telefone">
+            </div>
+            <div class="input-content">
+            <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <input type="text" placeholder="Insira sua data de nascimento">
+            </div>
+            <div class="input-sex">
+            <div class="sex-type active"><i class="fa-solid fa-mars-stroke"></i> Homem</div>
+            <div class="sex-type"><i class="fa-solid fa-venus"></i> Mulher</div>
+            </div>
+        </div>
+        <button onclick="termsAccept()">Aceitar termos</button>
+        <small>Concordo de livre e espontânea vontade.</small>
+        </terms>
+
+        <cupom style="display: none;">
+        <div class="text">
+            <!-- <span><i class="fa-solid fa-ticket"></i> cupom disponível</span> -->
+            <div class="code">cupom: <b id="textCupom">baixada30</b></div>
+            <p>Cupom disponível por tempo limitado.</p>
+        </div>
+        <!-- <img src="src/img/x.png"> -->
+        </cupom>
+
+        <div class = 'userGun-container' style="display: block">
+            <p>25 </p>
+            <span>300</span>
+        </div>
+    </body>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="src/js/app.js"></script>
+</html>
